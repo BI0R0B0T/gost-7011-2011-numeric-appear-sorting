@@ -4,8 +4,8 @@
   <info>
     <title>Russian GOST R 7.0.11-2011 numeric citations with appear sorting</title>
     <id>http://www.zotero.org/styles/russian-gost-r-7011-2011-numeric-citations-with-appear-sorting</id>
-    <link href="http://www.zotero.org/styles/russian-gost-r-7011-2011-numeric-citations-with-appear-sorting" rel="self"/>
-    <link href="http://protect.gost.ru/document.aspx?control=7&amp;id=173511" rel="documentation"/>
+    <link href="https://raw.githubusercontent.com/BI0R0B0T/gost-7011-2011-numeric-appear-sorting/master/russian-gost-r-7011-2011-numeric-citations-with-appear-sorting.csl" rel="self"/>
+    <link href="http://protect.gost.ru/document.aspx?control=7&amp;id=179727" rel="documentation"/>
     <author>
       <name>Konstantin ***kov</name>
       <email>k***kov@mail.ru</email>
