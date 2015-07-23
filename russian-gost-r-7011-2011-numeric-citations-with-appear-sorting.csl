@@ -140,7 +140,6 @@
         <single>P.</single>
         <multiple>P.</multiple>
       </term>
-
     </terms>
   </locale>
   <locale xml:lang="ru">
@@ -226,8 +225,6 @@
               <text variable="volume" prefix="– Т. "/>
               <text variable="issue" prefix="– № "/>
             </group>
-            <if></if>
-            <else></else>
             <text variable="page" prefix="– С. " suffix=""/>
           </group>
         </else>
