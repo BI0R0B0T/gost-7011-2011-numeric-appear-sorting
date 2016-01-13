@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
-<!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
+  <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>Russian GOST R 7.0.11-2011 numeric citations with appear sorting</title>
-    <id>russian-gost-r-7011-2011-numeric-citations-with-appear-sorting</id>
+    <id>http://www.zotero.org/styles/russian-gost-r-7011-2011-numeric-citations-with-appear-sorting</id>
     <link href="https://raw.githubusercontent.com/BI0R0B0T/gost-7011-2011-numeric-appear-sorting/master/russian-gost-r-7011-2011-numeric-citations-with-appear-sorting.csl" rel="self"/>
     <link href="http://protect.gost.ru/document.aspx?control=7&amp;id=179727" rel="documentation"/>
     <author>
@@ -122,40 +122,22 @@
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout prefix="[" suffix="]" delimiter=",">
+    <layout prefix="[" suffix="]" delimiter=", ">
       <text variable="citation-number"/>
     </layout>
   </citation>
   <locale xml:lang="en">
     <terms>
+      <term name="et-al"/>
       <term name="editor" form="verb">editor</term>
       <term name="accessed">accessed</term>
-      <term name="no date">n.d.</term>
-      <term name="et-al">et al.</term>
-      <term name="page">
-        <single>page</single>
-        <multiple>pages</multiple>
-      </term>
-      <term name="page" form="short">
-        <single>P.</single>
-        <multiple>P.</multiple>
-      </term>
     </terms>
   </locale>
   <locale xml:lang="ru">
     <terms>
+      <term name="et-al"/>
       <term name="editor" form="verb">под ред.</term>
       <term name="accessed">дата обращения</term>
-      <term name="no date">н.д.</term>
-      <term name="et-al">и др.</term>
-      <term name="page">
-        <single>страница</single>
-        <multiple>страницы</multiple>
-      </term>
-      <term name="page" form="short">
-        <single>C.</single>
-        <multiple>C.</multiple>
-      </term>
     </terms>
   </locale>
   <bibliography>
@@ -198,22 +180,26 @@
           <text variable="container-title" prefix="// "/>
           <text prefix=" " macro="access"/>
         </else-if>
-        <else-if type="article-journal article-magazine article-newspaper broadcast interview manuscript map patent personal_communication song speech thesis webpage" match="any">
+        <else-if type="article-journal article-magazine article-newspaper broadcast interview manuscript map patent personal_communication song speech thesis webpage generic" match="any">
           <text macro="title" prefix=" " suffix=""/>
           <group delimiter=" " prefix=" " suffix=".">
             <group prefix="/ " delimiter=" ">
-              <macro name="author">
-                <names variable="author">
-                  <name initialize-with=". " delimiter=", "/>
-                  <label form="short" prefix=", " text-case="capitalize-first"/>
-                </names>
-              </macro>
-              <text variable="container-title" form="short" prefix=" // "/>
+              <text macro="author" />
+              <!--
+                            <macro name="author">
+                              <names variable="author">
+                                <name initialize-with=". " delimiter=", "/>
+                                <label form="short" prefix=", " text-case="capitalize-first"/>
+                              </names>
+                            </macro>
+              -->
+              <text variable="container-title" form="long" prefix=" // "/>
               <text macro="year-date" prefix=" – " suffix="."/>
               <text variable="volume" prefix=" – Т. "/>
               <text variable="issue" prefix=" – № "/>
             </group>
-            <text variable="page" prefix="– С. " suffix=""/>
+            <text variable="page" prefix="– С." suffix=""/>
+            <!--<text variable="page" prefix="– " suffix="с."/>-->
           </group>
         </else-if>
         <else>
@@ -225,7 +211,7 @@
               <text variable="volume" prefix="– Т. "/>
               <text variable="issue" prefix="– № "/>
             </group>
-            <text variable="page" prefix="– С. " suffix=""/>
+            <text variable="page" prefix="– " suffix="с."/>
           </group>
         </else>
       </choose>
